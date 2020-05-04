@@ -5,7 +5,6 @@
 -- (Munchausen is also spelled: Münchhausen.)
 -- For instance:   3435 = 3^3 + 4^4 + 3^3 + 5^5
 
-
 local pwr = {}
 for i = 0,9 do
   pwr[i] = i^i
