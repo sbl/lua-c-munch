@@ -1,5 +1,10 @@
 CC=clang
-CFLAGS=-I/usr/local/include -O3 -Wall -Wextra -Werror
+
+CFLAGS=-I/usr/local/include
+CFLAGS+=-I/opt/homebrew/include
+CFLAGS+=-O3 -Wall -Wextra -Werror
+
+LUAFLAGS=-shared -undefined dynamic_lookup -fpic
 
 all: mu.so munch
 
@@ -7,7 +12,7 @@ munch: munch.o
 	$(CC) -o $@ $^
 
 mu.so: mu.o
-	$(CC) -shared -undefined dynamic_lookup -llua -fpic -o $@ $^
+	$(CC) $(LUAFLAGS) -o $@ $^
 
 
 .PHONY: clean
