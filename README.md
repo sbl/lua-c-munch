@@ -1,18 +1,4 @@
-# lua - C proof of concept
+# munch
 
-compute munchhausen numbers with c and without.
-
-
-```
-mkdir bulid
-cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-
-# compile
-make install
-
-
-# now run the lua code
-
-lua ...
-```
+examples how to integrate c into dynamic languages.
+munchhausen number algorithm used.

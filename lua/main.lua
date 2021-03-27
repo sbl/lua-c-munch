@@ -1,9 +1,4 @@
--- munchhausen
--- A Munchausen number is a natural number n the sum of whose digits (in base 10),
--- each raised to the power of itself, equals n.
---
--- (Munchausen is also spelled: Münchhausen.)
--- For instance:   3435 = 3^3 + 4^4 + 3^3 + 5^5
+local mu = require("mu")
 
 local pwr = {}
 for i = 0,9 do
@@ -27,8 +22,15 @@ local function is_munchhausen(i)
   return false
 end
 
+--for i = 1,1e7 do
+  --if is_munchhausen(i) then
+    --print(i)
+  --end
+--end
+
+
 for i = 1,1e7 do
-  if is_munchhausen(i) then
+  if mu.is_munch(i) then
     print(i)
   end
 end

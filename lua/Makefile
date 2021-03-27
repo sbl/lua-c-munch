@@ -6,11 +6,6 @@ CFLAGS+=-O3 -Wall -Wextra -Werror
 
 LUAFLAGS=-shared -undefined dynamic_lookup -fpic
 
-all: mu.so munch
-
-munch: munch.o
-	$(CC) -o $@ $^
-
 mu.so: mu.o
 	$(CC) $(LUAFLAGS) -o $@ $^
 
